@@ -14,7 +14,7 @@ var defaultOptions = {
 function localization () {
   d.querySelectorAll('[data-i18n]').forEach(function (node) {
     var tag = node.tagName.toLowerCase()
-    var translation = browser.i18n.getMessage(node.dataset.i18n)
+    var translation = chrome.i18n.getMessage(node.dataset.i18n)
 
     if (tag === 'input') {
       if (node.hasAttribute('placeholder')) {

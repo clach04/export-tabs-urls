@@ -12,11 +12,11 @@ var defaultPopupStates = {
   }
 }
 
-browser.runtime.getPlatformInfo(function (info) {
+chrome.runtime.getPlatformInfo(function (info) {
   os = info.os
 })
 
-browser.windows.getLastFocused(function (currentWindow) {
+chrome.windows.getLastFocused(function (currentWindow) {
   currentWindowId = currentWindow.id
 })
 
@@ -42,7 +42,7 @@ w.addEventListener('load', function () {
   })
 
   popupButtonSettings.addEventListener('click', function () {
-    browser.runtime.openOptionsPage()
+    chrome.runtime.openOptionsPage()
   })
 
   popupLimitWindow.addEventListener('change', function () {
@@ -69,7 +69,7 @@ w.addEventListener('load', function () {
 })
 
 function updatePopup () {
-  browser.tabs.query(
+  chrome.tabs.query(
     {},
     function (tabs) {
       var list = ''
@@ -152,9 +152,7 @@ function setSeparatorStyle () {
 }
 
 function setLimitWindowVisibility () {
-  let getting = browser.windows.getAll()
-
-  getting.then(function (windowInfoArray) {
+  chrome.windows.getAll((windowInfoArray) => {
     if (windowInfoArray.length > 1) {
       popupLimitWindow.parentNode.classList.remove('hidden')
     }
@@ -168,17 +166,17 @@ function copyToClipboard () {
 
   var message = d.execCommand('copy') ? 'copiedToClipboard' : 'notCopiedToClipboard'
 
-  browser.notifications.create('ExportTabsURLs', {
+  chrome.notifications.create('ExportTabsURLs', {
     'type': 'basic',
-    'title': browser.i18n.getMessage('appName'),
+    'title': chrome.i18n.getMessage('appName'),
     'iconUrl': '../img/icon.svg',
-    'message': browser.i18n.getMessage(message)
+    'message': chrome.i18n.getMessage(message)
   })
 
   popupButtonCopy.classList.add('disabled')
 
   setTimeout(function () {
-    browser.notifications.clear('ExportTabsURLs')
+    chrome.notifications.clear('ExportTabsURLs')
     popupButtonCopy.classList.remove('disabled')
   }, 3000)
 }
@@ -200,9 +198,7 @@ function download () {
 }
 
 function restorePopupStates () {
-  let gettingItem = browser.storage.local.get(defaultPopupStates)
-
-  gettingItem.then(function (items) {
+  chrome.storage.local.get(defaultPopupStates, (items) => {
     popupLimitWindow.checked = items.states.popupLimitWindow
     popupFormat.checked = items.states.format
 
@@ -211,7 +207,7 @@ function restorePopupStates () {
 }
 
 function savePopupStates () {
-  browser.storage.local.set({
+  chrome.storage.local.set({
     'states': {
       format: popupFormat.checked,
       popupLimitWindow: popupLimitWindow.checked
@@ -220,9 +216,7 @@ function savePopupStates () {
 }
 
 function getOptions () {
-  let gettingItem = browser.storage.local.get(defaultOptions)
-
-  gettingItem.then(function (items) {
+  chrome.storage.local.get(defaultOptions, (items) => {
     optionsIgnoreNonHTTP = items.options.ignoreNonHTTP
     optionsIgnorePinned = items.options.ignorePinned
     optionsFormatCustom = items.options.formatCustom

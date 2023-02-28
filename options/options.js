@@ -64,9 +64,7 @@ function setOptionsButtonResetHeaderVisibility () {
 }
 
 function restoreOptions () {
-  let gettingItem = browser.storage.local.get(defaultOptions)
-
-  gettingItem.then(function (items) {
+  chrome.storage.local.get(defaultOptions, (items) => {
     optionsIgnoreNonHTTP.checked = items.options.ignoreNonHTTP
     optionsIgnorePinned.checked = items.options.ignorePinned
     optionsFormatCustom.value = items.options.formatCustom
@@ -79,7 +77,7 @@ function restoreOptions () {
 }
 
 function saveOptions () {
-  browser.storage.local.set({
+  chrome.storage.local.set({
     'options': {
       ignoreNonHTTP: optionsIgnoreNonHTTP.checked,
       ignorePinned: optionsIgnorePinned.checked,
