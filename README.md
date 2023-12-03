@@ -11,6 +11,7 @@ Features that the original did not have:
   * Export to Netscape bookmark html file and override control over saved filename - thanks to https://github.com/KhashayarKhm/export-tabs-urls
   * Optional notifications - from https://github.com/jgmize/export-tabs-urls/tree/optional-notifications
   * 100% untested Android (possibly incomplete) support - from https://github.com/pepeloni-away/export-tabs-urls - see https://github.com/clach04/export-tabs-urls-phoenix/issues/4
+  * Slightly smaller, removed dependency on Moments.js - https://github.com/clach04/export-tabs-urls-phoenix/issues/11
 
 ## Dev notes
 

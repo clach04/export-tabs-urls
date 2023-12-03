@@ -218,6 +218,31 @@ function copyToClipboard () {
   }, 3000)
 }
 
+// return a string for current time in ISO-like format
+// ... without timezone
+// Example: '20231203T114124'
+// Example: '20231203T114124-0000' -- may not be strictly legal
+// Example: '20231203T114124-0100'
+// Example: '20231203T114124-0800'
+function generateIsoLikeDateString() {
+  var d = new Date();
+
+  // probably the dirtiest thing you'll see
+  return d.getFullYear() +
+    d.getMonth().toString().padStart(2, '0') +
+    d.getDate().toString().padStart(2, '0') +
+    'T' +
+    d.getHours().toString().padStart(2, '0') +
+    d.getMinutes().toString().padStart(2, '0') +
+    d.getSeconds().toString().padStart(2, '0');
+  /*
+  +
+    '-' + // TODO FIXME what about ahead of UTC, need to test on a machine.
+  Math.floor(d.getTimezoneOffset() / 60).toString().padStart(2, '0') +
+  (d.getTimezoneOffset() % 60).toString().padStart(2, '0')
+  */
+}
+
 function generateFileName() {
   if (popupCustomFileName.value) {
     return popupCustomFileName.value;
@@ -225,7 +250,7 @@ function generateFileName() {
   if (optionsCustomHeader) {
     return header + '_ExportTabsURLs';
   }
-  return moment().format('YYYYMMDDTHHmmssZZ') + '_ExportTabsURLsPhoenix';
+  return generateIsoLikeDateString() + '_ExportTabsURLsPhoenix';
 }
 
 function indent(num) {
