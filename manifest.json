@@ -9,7 +9,7 @@
         "48": "img/icon.svg",
         "128": "img/icon.svg"
     },
-    "browser_action": {
+    "action": {
         "browser_style": true,
         "default_icon": "img/icon.svg",
         "default_title": "__MSG_appButtonDesc__",
