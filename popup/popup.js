@@ -241,6 +241,6 @@ function getOptions () {
     optionsFormatCustom = items.options.formatCustom
     optionsFilterTabs = items.options.filterTabs
     optionsCustomHeader = items.options.customHeader
-    optionsNotifications = items.options.notifications
+    optionsNotifications = items.options.enableNotifications
   })
 }

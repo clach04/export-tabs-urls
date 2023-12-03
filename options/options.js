@@ -89,7 +89,7 @@ function saveOptions () {
       ignorePinned: optionsIgnorePinned.checked,
       formatCustom: optionsFormatCustom.value,
       filterTabs: optionsFilterTabs.checked,
-      notifications: optionsNotifications.checked,
+      enableNotifications: optionsNotifications.checked,
       customHeader: optionsCustomHeader.value
     }
   })
