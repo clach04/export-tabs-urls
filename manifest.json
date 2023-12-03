@@ -1,5 +1,5 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "__MSG_appName__",
     "description": "__MSG_appDesc__",
     "version": "0.2.14",
@@ -9,8 +9,7 @@
         "48": "img/icon.svg",
         "128": "img/icon.svg"
     },
-    "browser_action": {
-        "browser_style": true,
+    "action": {
         "default_icon": "img/icon.svg",
         "default_title": "__MSG_appButtonDesc__",
         "default_popup": "popup/popup.html",
@@ -25,8 +24,7 @@
         }]
     },
     "options_ui": {
-        "page": "options/options.html",
-        "browser_style": true
+        "page": "options/options.html"
     },
     "permissions": [
         "clipboardWrite",
