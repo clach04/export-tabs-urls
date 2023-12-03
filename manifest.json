@@ -10,7 +10,6 @@
         "128": "img/icon.svg"
     },
     "action": {
-        "browser_style": true,
         "default_icon": "img/icon.svg",
         "default_title": "__MSG_appButtonDesc__",
         "default_popup": "popup/popup.html",
@@ -25,8 +24,7 @@
         }]
     },
     "options_ui": {
-        "page": "options/options.html",
-        "browser_style": true
+        "page": "options/options.html"
     },
     "permissions": [
         "clipboardWrite",
