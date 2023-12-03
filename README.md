@@ -26,10 +26,22 @@ See http://blog.glavin.org/BurntChrome/docs/ for screenshots.
 
 Use `chrome.extension.getBackgroundPage().console.log()` and then click on "Inspect views background page" to see console.
 
-  * https://developer.chrome.com/extensions/extension
-  * https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage
-  * https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage
+Publishing:
 
+  * https://developer.chrome.com/docs/webstore/publish/
+  * https://chrome.google.com/webstore/devconsole/register
+
+### Edge
+
+Similar to Chrome (same engine under the covers).
+
+  * open edge://extensions/
+  * toggle Developer mode.
+  * "Load unpack", select checkout directory
+
+Publishing:
+
+  * https://learn.microsoft.com/en-us/microsoft-edge/extensions-chromium/publish/publish-extension
 
 ### Firefox
 
@@ -49,18 +61,13 @@ Uploading an **unlisted** extension will allow download of xpi for selt-hosted d
 Mozilla requires a new version to be uploaded and made public at upload time (i.e. version bump required).
 
 
-### Edge
-
-Similar to Chrome (same engine under the covers).
-
-  * open edge://extensions/
-  * toggle Developer mode.
-  * "Load unpack", select checkout directory
-
 ## Porting
 
   * https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/
   * https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
+  * https://developer.chrome.com/extensions/extension
+  * https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage
+  * https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage
 
 Original readme below from https://github.com/alct/export-tabs-urls
 
