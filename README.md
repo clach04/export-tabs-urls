@@ -8,6 +8,7 @@ Features that the original did not have:
 
   * Google Chrome, Microsoft Edge, and Mozilla Firefox support - thanks to https://github.com/skend/export-tabs-urls/tree/chrome-release (tested Chrome Version 119.0.6045.200 (Official Build) (64-bit), Firefox 120.0.1 (64-bit), Edge Version 119.0.2151.93 (Official build) (64-bit))
   * Import URLs support, paste URLs into window and click the number in the top right hand side, a new tab is opened for each line - thanks to https://github.com/errantmind/export-tabs-urls/tree/add-import-urls (note alternative is https://github.com/wantora/multiple-paste-and-go-button)
+  * Optional notifications - from https://github.com/jgmize/export-tabs-urls/tree/optional-notifications
 
 ## Dev notes
 
