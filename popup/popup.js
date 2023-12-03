@@ -3,7 +3,8 @@ var
   popupButtonCopy, popupButtonExport,
   popupFormat, popupLabelFormatTitles, popupLabelFormatCustom, popupLimitWindow,
   currentWindowId, os,
-  optionsIgnoreNonHTTP, optionsIgnorePinned, optionsFormatCustom, optionsFilterTabs, optionsCustomHeader
+  optionsIgnoreNonHTTP, optionsIgnorePinned, optionsFormatCustom, optionsFilterTabs, optionsCustomHeader,
+  optionsNotifications
 
 var defaultPopupStates = {
   'states': {
@@ -180,17 +181,21 @@ function copyToClipboard () {
 
   var message = d.execCommand('copy') ? 'copiedToClipboard' : 'notCopiedToClipboard'
 
-  chrome.notifications.create('ExportTabsURLsPhoenix', {
-    'type': 'basic',
-    'title': chrome.i18n.getMessage('appName'),
-    'iconUrl': '../img/icon.svg',
-    'message': chrome.i18n.getMessage(message)
-  })
+  if (optionsNotifications) {
+    chrome.notifications.create('ExportTabsURLsPhoenix', {
+      'type': 'basic',
+      'title': chrome.i18n.getMessage('appName'),
+      'iconUrl': '../img/icon.svg',
+      'message': chrome.i18n.getMessage(message)
+    })
+  }
 
   popupButtonCopy.classList.add('disabled')
 
   setTimeout(function () {
-    chrome.notifications.clear('ExportTabsURLsPhoenix')
+    if (optionsNotifications) {
+      chrome.notifications.clear('ExportTabsURLsPhoenix')
+    }
     popupButtonCopy.classList.remove('disabled')
   }, 3000)
 }
@@ -236,5 +241,6 @@ function getOptions () {
     optionsFormatCustom = items.options.formatCustom
     optionsFilterTabs = items.options.filterTabs
     optionsCustomHeader = items.options.customHeader
+    optionsNotifications = items.options.notifications
   })
 }
