@@ -1,6 +1,8 @@
 # Export Tabs URLs
 
-https://github.com/clach04/export-tabs-urls/ is a fork of alct's (Andre Loconte) export-tabs-urls
+https://github.com/clach04/export-tabs-urls-phoenix is a fork of alct's (Andre Loconte) export-tabs-urls (version 0.2.12).
+
+Renamed and newer version number to attempt to reduce confusion with original upstream.
 
 Features that the original did not have:
 

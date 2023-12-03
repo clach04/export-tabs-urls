@@ -166,7 +166,7 @@ function copyToClipboard () {
 
   var message = d.execCommand('copy') ? 'copiedToClipboard' : 'notCopiedToClipboard'
 
-  chrome.notifications.create('ExportTabsURLs', {
+  chrome.notifications.create('ExportTabsURLsPhoenix', {
     'type': 'basic',
     'title': chrome.i18n.getMessage('appName'),
     'iconUrl': '../img/icon.svg',
@@ -176,7 +176,7 @@ function copyToClipboard () {
   popupButtonCopy.classList.add('disabled')
 
   setTimeout(function () {
-    chrome.notifications.clear('ExportTabsURLs')
+    chrome.notifications.clear('ExportTabsURLsPhoenix')
     popupButtonCopy.classList.remove('disabled')
   }, 3000)
 }
@@ -189,7 +189,7 @@ function download () {
 
   var element = d.createElement('a')
   element.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(list)
-  element.download = moment().format('YYYYMMDDTHHmmssZZ') + '_ExportTabsURLs.txt'
+  element.download = moment().format('YYYYMMDDTHHmmssZZ') + '_ExportTabsURLsPhoenix.txt'
   element.style.display = 'none'
 
   d.body.appendChild(element)
