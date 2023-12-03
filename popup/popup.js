@@ -15,9 +15,19 @@ var defaultPopupStates = {
 
 chrome.runtime.getPlatformInfo(function (info) {
   os = info.os
+  // scale page to android device
+  if (os === 'android') {
+    const meta = document.createElement('meta')
+    meta.setAttribute('name', 'viewport')
+    meta.setAttribute('content', 'width=device-width, initial-scale=0.9, user-scalable=no')
+    document.head.append(meta)
+    // settings button doesn't work, open settings from addons manager 
+    document.querySelector('.popup-settings').style.display = 'none'
+  }
 })
 
-chrome.windows.getLastFocused(function (currentWindow) {
+// browser.windows is undefined on android - unclear about chrome.windows
+chrome?.windows?.getLastFocused?.(function (currentWindow) {
   currentWindowId = currentWindow.id
 })
 
@@ -167,7 +177,9 @@ function setSeparatorStyle () {
 }
 
 function setLimitWindowVisibility () {
-  chrome.windows.getAll((windowInfoArray) => {
+  let getting = chrome?.windows?.getAll?.()
+
+  getting?.then?.(function (windowInfoArray) {
     if (windowInfoArray.length > 1) {
       popupLimitWindow.parentNode.classList.remove('hidden')
     }
