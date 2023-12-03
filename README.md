@@ -28,7 +28,7 @@ Use `chrome.extension.getBackgroundPage().console.log()` and then click on "Insp
 
 ### Firefox
 
-  * open about:debugging#/runtime/this-firefox
+  * open [about:debugging#/runtime/this-firefox](about:debugging#/runtime/this-firefox)
   * "Load Temporary Add-on.."
   * select checkout directory, and open `manifest.json`
 
