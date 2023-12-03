@@ -42,6 +42,7 @@ Similar to Chrome (same engine under the covers).
 Publishing:
 
   * https://learn.microsoft.com/en-us/microsoft-edge/extensions-chromium/publish/publish-extension
+  * https://learn.microsoft.com/en-us/microsoft-edge/extensions-chromium/publish/create-dev-account?source=recommendations
 
 ### Firefox
 
