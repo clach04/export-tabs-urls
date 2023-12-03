@@ -262,7 +262,7 @@ function indent(num) {
 }
 
 function downloadHTML() {
-  browser.tabs.query(
+  chrome.tabs.query(
     {},
     function (tabs) {
       var file = '<!DOCTYPE NETSCAPE-Bookmark-file-1>\n'
