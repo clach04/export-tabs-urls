@@ -3,6 +3,7 @@ var w = window
 
 var defaultOptions = {
   'options': {
+    enableNotifications: true,
     ignoreNonHTTP: true,
     ignorePinned: false,
     formatCustom: '',

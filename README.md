@@ -8,6 +8,7 @@ Features that the original did not have:
 
   * Google Chrome, Microsoft Edge, and Mozilla Firefox support - thanks to https://github.com/skend/export-tabs-urls/tree/chrome-release (tested Chrome Version 119.0.6045.200 (Official Build) (64-bit), Firefox 120.0.1 (64-bit), Edge Version 119.0.2151.93 (Official build) (64-bit))
   * Import URLs support, paste URLs into window and click the number in the top right hand side, a new tab is opened for each line - thanks to https://github.com/errantmind/export-tabs-urls/tree/add-import-urls (note alternative is https://github.com/wantora/multiple-paste-and-go-button)
+  * Optional notifications - from https://github.com/jgmize/export-tabs-urls/tree/optional-notifications
 
 ## Dev notes
 
@@ -77,7 +78,7 @@ Consider this add-on done (except for bugfixes). I may or may not add new featur
 
 - **Access browser tabs** : required to list the tabs ;
 - **Input data to the clipboard** : required to copy the list to the clipboard ;
-- **Display notifications** : not required stricto sensu (as the extension could work without it) but it is used to improve the user experience by providing visual feedback about what is going on ;
+- **Display notifications** : not required stricto sensu (as the extension could work without it) but it is used to improve the user experience by providing visual feedback about what is going on (if the "Enable Notifications" option is selected) ;
 - **Storage** : required to store settings.
 
 ## Screenshots
