@@ -50,7 +50,10 @@ Publishing:
   * "Load Temporary Add-on.."
   * select checkout directory, and open `manifest.json`
 
-https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
+Publishing:
+
+  * https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
+  * https://extensionworkshop.com/documentation/publish/package-your-extension/
 
     npm install  web-ext
     web-ext lint
