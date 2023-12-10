@@ -31,5 +31,11 @@
         "notifications",
         "storage",
         "tabs"
-    ]
+    ],
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "{b304d0a6-ed8c-40f5-93a6-82a60c540801}",
+        "strict_min_version": "109.0"
+      }
+    }
 }
