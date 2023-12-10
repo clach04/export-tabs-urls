@@ -183,6 +183,7 @@ function setSeparatorStyle () {
 }
 
 function setLimitWindowVisibility () {
+  /* getting undefined under Desktop. TODO review other `?.` usage with Android compatible code
   let getting = chrome?.windows?.getAll?.()
 
   getting?.then?.(function (windowInfoArray) {
@@ -190,6 +191,15 @@ function setLimitWindowVisibility () {
       popupLimitWindow.parentNode.classList.remove('hidden')
     }
   })
+  //popupLimitWindow.parentNode.classList.remove('hidden');  // works as a hack and not too ugly - could just change html and make this a noop
+  let getting = chrome.windows.getAll()  // this works, unknown impact to Android
+
+  getting?.then?.(function (windowInfoArray) {
+    if (windowInfoArray.length > 1) {
+      popupLimitWindow.parentNode.classList.remove('hidden')
+    }
+  })
+  */
 }
 
 function copyToClipboard () {
