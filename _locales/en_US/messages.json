@@ -75,7 +75,7 @@
         "message": "Include titles"
     },
     "popupCustomFileName": {
-        "message": "File name"
+        "message": "Override export file name"
     },
     "copiedToClipboard": {
         "message": "The list has successfully been copied to your clipboard."
