@@ -1,7 +1,7 @@
 var
   popupButtonSettings, popupCounter, popupTextarea, popupTextareaContainer, popupFilterTabs, popupFilterTabsContainer,
-  popupButtonCopy, popupButtonExport, popupCustomFileName,
-  popupFormat, popupLabelFormatTitles, popupLabelFormatCustom, popupLimitWindow, popupExportHTMLNetscapeFormat,
+  popupButtonCopy, popupButtonExport, popupButtonExportHtml, popupCustomFileName,
+  popupFormat, popupLabelFormatTitles, popupLabelFormatCustom, popupLimitWindow,
   currentWindowId, os,
   optionsIgnoreNonHTTP, optionsIgnorePinned, optionsFormatCustom, optionsFilterTabs, optionsCustomHeader,
   optionsNotifications
@@ -10,7 +10,6 @@ var defaultPopupStates = {
   'states': {
     format: false,
     popupLimitWindow: false,
-    popupExportHTMLNetscapeFormat: false
   }
 }
 
@@ -42,10 +41,10 @@ w.addEventListener('load', function () {
   popupLabelFormatTitles = d.getElementsByClassName('popup-label-format-titles')[0]
   popupLabelFormatCustom = d.getElementsByClassName('popup-label-format-custom')[0]
   popupLimitWindow = d.getElementById('popup-limit-window')
-  popupExportHTMLNetscapeFormat = d.getElementById('popup-export-html-netscape-format')
   popupCustomFileName = d.getElementById('popup-custom-file-name')
   popupButtonCopy = d.getElementsByClassName('popup-button-copy')[0]
-  popupButtonExport = d.getElementsByClassName('popup-button-export')[0]
+  popupButtonExport = d.getElementsByClassName('popup-button-export')[0]  // text / txt
+  popupButtonExportHtml = d.getElementsByClassName('popup-button-export-html')[0]
   popupButtonSettings = d.getElementsByClassName('popup-button-settings')[0]
 
   setLimitWindowVisibility()
@@ -68,11 +67,6 @@ w.addEventListener('load', function () {
     updatePopup()
   })
 
-  popupExportHTMLNetscapeFormat.addEventListener('change', function () {
-    savePopupStates()
-    updatePopup()
-  })
-
   popupFilterTabs.addEventListener('input', function () {
     updatePopup()
   })
@@ -83,6 +77,10 @@ w.addEventListener('load', function () {
 
   popupButtonExport.addEventListener('click', function () {
     download()
+  })
+
+  popupButtonExportHtml.addEventListener('click', function () {
+    downloadHTML()
   })
 
   getOptions()
@@ -183,6 +181,7 @@ function setSeparatorStyle () {
 }
 
 function setLimitWindowVisibility () {
+  /* getting undefined under Desktop. TODO review other `?.` usage with Android compatible code
   let getting = chrome?.windows?.getAll?.()
 
   getting?.then?.(function (windowInfoArray) {
@@ -190,6 +189,15 @@ function setLimitWindowVisibility () {
       popupLimitWindow.parentNode.classList.remove('hidden')
     }
   })
+  //popupLimitWindow.parentNode.classList.remove('hidden');  // works as a hack and not too ugly - could just change html and make this a noop
+  let getting = chrome.windows.getAll()  // this works, unknown impact to Android
+
+  getting?.then?.(function (windowInfoArray) {
+    if (windowInfoArray.length > 1) {
+      popupLimitWindow.parentNode.classList.remove('hidden')
+    }
+  })
+  */
 }
 
 function copyToClipboard () {
@@ -328,9 +336,6 @@ function download () {
   // fix inconsistent behaviour on Windows, see https://github.com/alct/export-tabs-urls/issues/2
   if (os === 'win') list = list.replace(/\r?\n/g, '\r\n')
 
-  if (popupExportHTMLNetscapeFormat.checked) {
-    downloadHTML()
-  } else {
     var element = d.createElement('a')
     element.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(list)
     element.download = generateFileName() + '.txt'
@@ -339,14 +344,12 @@ function download () {
     d.body.appendChild(element)
     element.click()
     d.body.removeChild(element)
-  }
 }
 
 function restorePopupStates () {
   chrome.storage.local.get(defaultPopupStates, (items) => {
     popupLimitWindow.checked = items.states.popupLimitWindow
     popupFormat.checked = items.states.format
-    popupExportHTMLNetscapeFormat.checked = items.states.popupExportHTMLNetscapeFormat
 
     updatePopup()
   })
@@ -357,7 +360,6 @@ function savePopupStates () {
     'states': {
       format: popupFormat.checked,
       popupLimitWindow: popupLimitWindow.checked,
-      popupExportHTMLNetscapeFormat: popupExportHTMLNetscapeFormat.checked
     }
   })
 }
