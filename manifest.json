@@ -31,5 +31,11 @@
         "notifications",
         "storage",
         "tabs"
-    ]
+    ],
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "https://addons.mozilla.org/en-US/firefox/addon/export-tabs-urls-phoenix/",
+        "strict_min_version": "109.0"
+      }
+    }
 }
