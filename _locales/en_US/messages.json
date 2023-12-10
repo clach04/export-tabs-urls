@@ -6,7 +6,7 @@
         "message": "Export Tabs URLs Phoenix"
     },
     "appDesc": {
-        "message": "Save a list of all open tabs into a text file."
+        "message": "Save a list of all open tabs into clipboard, text file, or html bookmarks file."
     },
     "optionsFormatCustom": {
         "message": "Custom format"
