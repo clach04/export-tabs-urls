@@ -1,8 +1,16 @@
 # Export Tabs URLs
 
-https://github.com/clach04/export-tabs-urls-phoenix is a fork of alct's (Andre Loconte) export-tabs-urls (version 0.2.12).
+[Export Tabs URLs Phoenix](https://addons.mozilla.org/firefox/addon/export-tabs-urls-phoenix/) is a Web browser extension that allows to list the URLs of all the open tabs and export/copy that list to clipboard, text file, or html bookmarks file.
 
-Renamed and newer version number to attempt to reduce confusion with original upstream.
+https://github.com/clach04/export-tabs-urls-phoenix is a fork of alct's (Andre Loconte) export-tabs-urls (version 0.2.12 from 2019).
+
+Renamed and newer version number(s) to attempt to reduce confusion with original upstream.
+
+To install:
+
+  * Firefox open https://addons.mozilla.org/en-US/firefox/addon/export-tabs-urls-phoenix/
+  * Edge - download from releases https://github.com/clach04/export-tabs-urls-phoenix/releases  (store support in process, see https://github.com/clach04/export-tabs-urls-phoenix/issues/25)
+  * Chrome - download from releases https://github.com/clach04/export-tabs-urls-phoenix/releases (see https://github.com/clach04/export-tabs-urls-phoenix/issues/25)
 
 Features that the original did not have:
 
@@ -14,6 +22,8 @@ Features that the original did not have:
   * Slightly smaller, removed dependency on Moments.js - https://github.com/clach04/export-tabs-urls-phoenix/issues/11
   * Revised German translation - thanks to https://github.com/pikim/export-tabs-urls/tree/patch-1
   * Revised English translation
+
+----------------------------------------------------
 
 ## Dev notes
 
@@ -76,7 +86,7 @@ Mozilla requires a new version to be uploaded and made public at upload time (i.
 
 Original readme below from https://github.com/alct/export-tabs-urls
 
----------
+----------------------------------------------------
 
 [Export Tabs URLs](https://addons.mozilla.org/en-US/firefox/addon/export-tabs-urls-and-titles/) (ETU) is a Web browser extension that allows to list the URLs of all the open tabs and copy that list to clipboard or export it to a timestamped file.
 
