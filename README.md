@@ -13,6 +13,7 @@ Features that the original did not have:
   * 100% untested Android (possibly incomplete) support - from https://github.com/pepeloni-away/export-tabs-urls - see https://github.com/clach04/export-tabs-urls-phoenix/issues/4
   * Slightly smaller, removed dependency on Moments.js - https://github.com/clach04/export-tabs-urls-phoenix/issues/11
   * Revised German translation - thanks to https://github.com/pikim/export-tabs-urls/tree/patch-1
+  * Revised English translation
 
 ## Dev notes
 
