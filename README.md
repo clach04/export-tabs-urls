@@ -9,7 +9,7 @@ Renamed and newer version number(s) to attempt to reduce confusion with original
 To install:
 
   * Firefox open https://addons.mozilla.org/en-US/firefox/addon/export-tabs-urls-phoenix/
-  * Edge - download from releases https://github.com/clach04/export-tabs-urls-phoenix/releases  (store support in process, see https://github.com/clach04/export-tabs-urls-phoenix/issues/25)
+  * Edge - open https://microsoftedge.microsoft.com/addons/detail/export-tabs-urls-phoenix/kifkihkfepnaejdblaifjanlmmmfjnba?hl=en-US
   * Chrome - download from releases https://github.com/clach04/export-tabs-urls-phoenix/releases (see https://github.com/clach04/export-tabs-urls-phoenix/issues/25)
 
 Features that the original did not have:
