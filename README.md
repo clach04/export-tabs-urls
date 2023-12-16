@@ -57,7 +57,7 @@ Publishing:
 
 ### Firefox
 
-  * open [about:debugging#/runtime/this-firefox](about:debugging#/runtime/this-firefox)
+  * open <about:debugging#/runtime/this-firefox>
   * "Load Temporary Add-on.."
   * select checkout directory, and open `manifest.json`
 
