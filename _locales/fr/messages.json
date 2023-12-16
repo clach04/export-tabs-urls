@@ -3,7 +3,7 @@
         "message": "Export Tabs URLs Phoenix"
     },
     "appName": {
-        "message": "Export Tabs URLs Phoenix"
+        "message": "Export Tabs URLs Phoenix legacy"
     },
     "appDesc": {
         "message": "Sauvegarde les adresses des onglets ouverts dans un fichier."
