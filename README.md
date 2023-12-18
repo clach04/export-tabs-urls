@@ -4,11 +4,12 @@
 
 https://github.com/clach04/export-tabs-urls-phoenix is a fork of alct's (Andre Loconte) export-tabs-urls (version 0.2.12 from 2019).
 
-Renamed and newer version number(s) to attempt to reduce confusion with original upstream.
+Renamed and newer version number(s) to attempt to reduce confusion with the original upstream.
 
 To install:
 
   * Firefox open https://addons.mozilla.org/en-US/firefox/addon/export-tabs-urls-phoenix/
+      * For Firefox versions earlier than version 109 install the Legacy (v2 manifest) release from https://addons.mozilla.org/en-US/firefox/addon/export-tabs-urls-phoenix-legac/
   * Edge - open https://microsoftedge.microsoft.com/addons/detail/export-tabs-urls-phoenix/kifkihkfepnaejdblaifjanlmmmfjnba?hl=en-US
   * Chrome - download from releases https://github.com/clach04/export-tabs-urls-phoenix/releases (see https://github.com/clach04/export-tabs-urls-phoenix/issues/25)
 
