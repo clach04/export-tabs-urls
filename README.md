@@ -11,7 +11,7 @@ To install:
   * Firefox open https://addons.mozilla.org/en-US/firefox/addon/export-tabs-urls-phoenix/
       * For Firefox versions earlier than version 109 install the Legacy (v2 manifest) release from https://addons.mozilla.org/en-US/firefox/addon/export-tabs-urls-phoenix-legac/
   * Edge - open https://microsoftedge.microsoft.com/addons/detail/export-tabs-urls-phoenix/kifkihkfepnaejdblaifjanlmmmfjnba?hl=en-US
-  * Chrome - download from releases https://github.com/clach04/export-tabs-urls-phoenix/releases (see https://github.com/clach04/export-tabs-urls-phoenix/issues/25)
+  * Chrome - download a zip or checkout source and see [dev Chrome notes](#chrome) (also see https://github.com/clach04/export-tabs-urls-phoenix/issues/25 for background)
 
 Features that the original did not have:
 
@@ -30,9 +30,9 @@ Features that the original did not have:
 
 ### Chrome
 
-  * open More tools, then Extensions (open chrome://extensions/ )
-  * then toggle Developer mode.
-  * "Load unpack", select checkout directory
+  * open ... menu, Extensions, Manage Extensions (open chrome://extensions/ )
+  * then toggle Developer mode (top right hand corner).
+  * "Load unpack", select checkout directory (or extracted zip for example https://github.com/clach04/export-tabs-urls-phoenix/releases/download/0.2.15/export-tabs-urls-phoenix_v0.2.15_chrome_branch_no_ff_id.zip)
 
 See http://blog.glavin.org/BurntChrome/docs/ for screenshots.
 
