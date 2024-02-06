@@ -73,7 +73,7 @@ Publishing:
     web-ext sign --api-key=$AMO_JWT_ISSUER --api-secret=$AMO_JWT_SECRET
     web-ext sign --api-key=%AMO_JWT_ISSUER% --api-secret=%AMO_JWT_SECRET%
 
-Uploading an **unlisted** extension will allow download of xpi for selt-hosted distribution but can never be made public.
+Uploading an **unlisted** extension will allow download of xpi for self-hosted distribution but can never be made public.
 Mozilla requires a new version to be uploaded and made public at upload time (i.e. version bump required).
 
 
@@ -105,7 +105,7 @@ Consider this add-on done (except for bugfixes). I may or may not add new featur
 
 - **Access browser tabs** : required to list the tabs ;
 - **Input data to the clipboard** : required to copy the list to the clipboard ;
-- **Display notifications** : not required stricto sensu (as the extension could work without it) but it is used to improve the user experience by providing visual feedback about what is going on (if the "Enable Notifications" option is selected) ;
+- **Display notifications** : not strictly required/needed (as the extension could work without it) but it is used to improve the user experience by providing visual feedback about what is going on (if the "Enable Notifications" option is selected) ;
 - **Storage** : required to store settings.
 
 ## Screenshots
