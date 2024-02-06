@@ -11,7 +11,7 @@ To install:
   * Firefox open https://addons.mozilla.org/en-US/firefox/addon/export-tabs-urls-phoenix/
       * For Firefox versions earlier than version 109 install the Legacy (v2 manifest) release from https://addons.mozilla.org/en-US/firefox/addon/export-tabs-urls-phoenix-legac/
   * Edge - open https://microsoftedge.microsoft.com/addons/detail/export-tabs-urls-phoenix/kifkihkfepnaejdblaifjanlmmmfjnba?hl=en-US
-  * Chrome - download a zip or checkout source and see [dev Chrome notes](#chrome) (also see https://github.com/clach04/export-tabs-urls-phoenix/issues/25 for background)
+  * Chrome - download a zip or checkout source (from branch https://github.com/clach04/export-tabs-urls-phoenix/tree/png_icon_issue21) and see [dev Chrome notes](#chrome) (also see https://github.com/clach04/export-tabs-urls-phoenix/issues/25 for background)
 
 Features that the original did not have:
 
