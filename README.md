@@ -110,6 +110,10 @@ Consider this add-on done (except for bugfixes). I may or may not add new featur
 
 ## Screenshots
 
+![screenshot-1](https://raw.githubusercontent.com/clach04/export-tabs-urls-phoenix/main/screenshots/export-tabs-urls-phoenix_main.png)
+
+Old Screenshots
+
 ![screenshot-1](https://imgs.be/5cadf463-2668.png)
 ![screenshot-2](https://imgs.be/5cadf439-1411.png)
 ![screenshot-3](https://imgs.be/5cadf44d-1457.png)
