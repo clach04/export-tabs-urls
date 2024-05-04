@@ -4,13 +4,14 @@
 
 https://github.com/clach04/export-tabs-urls-phoenix is a fork of alct's (Andre Loconte) export-tabs-urls (version 0.2.12 from 2019).
 
-Renamed and newer version number(s) to attempt to reduce confusion with original upstream.
+Renamed and newer version number(s) to attempt to reduce confusion with the original upstream.
 
 To install:
 
   * Firefox open https://addons.mozilla.org/en-US/firefox/addon/export-tabs-urls-phoenix/
+      * For Firefox versions earlier than version 109 install the Legacy (v2 manifest) release from https://addons.mozilla.org/en-US/firefox/addon/export-tabs-urls-phoenix-legac/
   * Edge - open https://microsoftedge.microsoft.com/addons/detail/export-tabs-urls-phoenix/kifkihkfepnaejdblaifjanlmmmfjnba?hl=en-US
-  * Chrome - download from releases https://github.com/clach04/export-tabs-urls-phoenix/releases (see https://github.com/clach04/export-tabs-urls-phoenix/issues/25)
+  * Chrome - download a zip or checkout source (from branch https://github.com/clach04/export-tabs-urls-phoenix/tree/png_icon_issue21) and see [dev Chrome notes](#chrome) (also see https://github.com/clach04/export-tabs-urls-phoenix/issues/25 for background)
 
 Features that the original did not have:
 
@@ -29,9 +30,9 @@ Features that the original did not have:
 
 ### Chrome
 
-  * open More tools, then Extensions (open chrome://extensions/ )
-  * then toggle Developer mode.
-  * "Load unpack", select checkout directory
+  * open ... menu, Extensions, Manage Extensions (open chrome://extensions/ )
+  * then toggle Developer mode (top right hand corner).
+  * "Load unpack", select checkout directory (or extracted zip for example https://github.com/clach04/export-tabs-urls-phoenix/releases/download/0.2.15/export-tabs-urls-phoenix_v0.2.15_chrome_branch_no_ff_id.zip)
 
 See http://blog.glavin.org/BurntChrome/docs/ for screenshots.
 
@@ -57,7 +58,7 @@ Publishing:
 
 ### Firefox
 
-  * open [about:debugging#/runtime/this-firefox](about:debugging#/runtime/this-firefox)
+  * open <about:debugging#/runtime/this-firefox>
   * "Load Temporary Add-on.."
   * select checkout directory, and open `manifest.json`
 
@@ -72,7 +73,7 @@ Publishing:
     web-ext sign --api-key=$AMO_JWT_ISSUER --api-secret=$AMO_JWT_SECRET
     web-ext sign --api-key=%AMO_JWT_ISSUER% --api-secret=%AMO_JWT_SECRET%
 
-Uploading an **unlisted** extension will allow download of xpi for selt-hosted distribution but can never be made public.
+Uploading an **unlisted** extension will allow download of xpi for self-hosted distribution but can never be made public.
 Mozilla requires a new version to be uploaded and made public at upload time (i.e. version bump required).
 
 
@@ -104,7 +105,7 @@ Consider this add-on done (except for bugfixes). I may or may not add new featur
 
 - **Access browser tabs** : required to list the tabs ;
 - **Input data to the clipboard** : required to copy the list to the clipboard ;
-- **Display notifications** : not required stricto sensu (as the extension could work without it) but it is used to improve the user experience by providing visual feedback about what is going on (if the "Enable Notifications" option is selected) ;
+- **Display notifications** : not strictly required/needed (as the extension could work without it) but it is used to improve the user experience by providing visual feedback about what is going on (if the "Enable Notifications" option is selected) ;
 - **Storage** : required to store settings.
 
 ## Screenshots
